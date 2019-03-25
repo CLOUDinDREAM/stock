@@ -1,0 +1,33 @@
+<!--pages/list/list.wxml-->
+<view class='container'>
+  <view class="section-search">
+    <input placeholder="这是一个可以自动聚焦的input" focus="{{focus}}" />
+  </view>
+  <view class='section-main'>
+    <view class='main'>
+      <view class='main-for' wx:for="{{moneys}}" wx:key="key">
+        <button>{{item.date}}</button>
+        <button>{{item.money}}</button>
+        <button wx:if='{{item.state == "-"}}'>{{item.num}}
+          <icon type="cancel" size="10" color='green' />
+        </button>
+        <button wx:if='{{item.state == "+"}}'>{{item.num}}
+          <icon type="success" size="10" color='red' />
+        </button>
+        <button wx:if='{{item.state == ""}}'>0
+        </button>
+      </view>
+    </view>
+    <view class='total'>
+      <text>total:{{total}}</text>
+    </view>
+  </view>
+  <view class='section-bottom'>
+    <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="goCanvas" hover-class="other-button-hover">
+      default
+    </button>
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="changeColor">
+      primary
+    </button>
+  </view>
+</view>

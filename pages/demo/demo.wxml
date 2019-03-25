@@ -1,0 +1,13 @@
+<!--pages/demo/demo.wxml-->
+<view class='container'>
+  <view class='demo-top'> </view>
+  <view class='demo-middle'>
+    <view class='middle'>
+        <button>1</button>
+        <button>1</button>
+        <button>1</button>
+    </view>
+
+   </view>
+  <view class='demo-bottom'> </view>
+</view>
